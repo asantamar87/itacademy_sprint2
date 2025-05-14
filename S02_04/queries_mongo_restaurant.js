@@ -7,7 +7,18 @@
 6. db.restaurants.find({ borough: "Bronx" }).limit(5);
 7. db.Restaurants.find({ borough: "Bronx" }).skip(5).limit(5);
 8. db.Restaurants.find({ "grades.score": { $gt: 90 } });
+
+8.1 db.restaurants.find(
+  { "grades.score": { $gt: 90 } }, 
+  { name: 1, grades: { $elemMatch: { score: { $gt: 90 } } }, _id: 0 }
+).pretty();
+
 9. db.restaurants.find({ "grades.score": { $gt: 80, $lt: 100 } });
+
+9.1 db.restaurants.find(
+  { "grades.score": { $gt: 80, $lt: 100 } },
+  { name: 1, grades: { $elemMatch: { score: { $gt: 80, $lt: 100 } } }, _id: 0 }
+).pretty();
 10.db.restaurants.find({ "address.coord.0": { $lt: -95.754168 } });
 11.db.restaurants.find({"address.coord.0": {$lt: -95.754168}}).pretty();
 12.db.restaurants.find({cuisine: {$ne: "American"}, "grades.score":{$gt:70}, "address.coord.0": {$lt: -65.754168}}).pretty();
