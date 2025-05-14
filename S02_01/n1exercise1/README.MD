@@ -1,4 +1,4 @@
-# 🕶️ "Cul d'Ampolla" Optician — Entity-Relationship Modeling
+# 🕶️Level 1 - Exercise 1 - "Cul d'Ampolla" Optician — Entity-Relationship Modeling
 
 This project is part of **Level 1 - Exercise 1** in a database course. The goal is to **design and implement a relational database** to manage the operations of an optician shop called _"Cul d'Ampolla"_.
 
